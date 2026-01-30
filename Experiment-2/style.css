@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #0a66c2;
+    color: white;
+}
+
+.navbar a {
+    color: #ffd814;
+    margin-left: 15px;
+    text-decoration:dashed;
+}
+.navbar a:hover{
+    border-bottom: 2px solid transparent;
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    background-color: #f3f6f8;
+}
+
+.search input {
+    padding: 10px;
+    width: 200px;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #0a66c2;
+    color: white;
+    border: none;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.box {
+    padding: 20px;
+    background-color: #e8f0fe;
+    border: 1px solid black;
+    border-width: 2px;
+    border-radius: 6px;
+    width: 150px;
+    text-align: center;
+}
+
+/* Jobs */
+.jobs {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.job-card {
+    padding: 20px;
+    border: 1px solid black;
+    border-width: 2px;
+    width: 250px;
+    border-radius: 6px;
+    background-color: aquamarine;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0a66c2;
+    color: aqua;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search,
+    .categories,
+    .jobs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
