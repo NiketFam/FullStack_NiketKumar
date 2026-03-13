@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document object Manipulation</h1>
+    <input type="text" id="itemInput" placeholder="Enter Name"></input>
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Item from List</button>
+    <ul id="ItemList"></ul>    
+<script>
+function addItem(){
+    var input=document.getElementById("itemInput");
+    var value=input.value;
+    if(value==""){
+        alert("Please enter the item");
+        return;
+    }
+    else{
+        var li=document.createElement("li");
+        li.textContent=value;
+        var ul=document.getElementById("ItemList");
+        ul.appendChild(li);
+        input.value=" "; 
+    }
+}
+function removeItem(){
+    var ul=document.getElementById("ItemList");
+    if(ul.lastElementChild){
+        ul.removeChild(ul.lastElementChild);
+    }
+    else{
+        alert("No items to remove");
+    }
+}
+</script>
+</body>
+</html>
